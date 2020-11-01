@@ -6,7 +6,7 @@ font = {'family' : 'normal',
 
 plt.rc('font', **font)
 
-maina = open("result_a/main_a_softer.txt", "r")
+maina = open("LimogesBenedictins/CPU_Program/main_a_softer.txt", "r")
 ya = maina.read().split("\n")
 ya.remove('')
 sumlinesa = ya[1000]
@@ -15,7 +15,7 @@ ya = np.array(ya)
 ya = ya.astype(np.float)
 x = range(0, len(ya))
 
-mainb = open("result_b/main_b_softer.txt", "r")
+mainb = open("LimogesBenedictins/GPU_NonSharedMem/main_b_softer.txt", "r")
 yb = mainb.read().split("\n")
 yb.remove('')
 sumlinesb = yb[1000]
@@ -23,7 +23,7 @@ yb.remove(sumlinesb)
 yb = np.array(yb)
 yb = yb.astype(np.float)
 
-mainc = open("result_c/main_c_softer.txt", "r")
+mainc = open("LimogesBenedictins/GPU_SharedMem/main_c_softer.txt", "r")
 yc = mainc.read().split("\n")
 yc.remove('')
 sumlinesc = yc[1000]

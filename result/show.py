@@ -7,7 +7,7 @@ font = {'family' : 'normal',
 
 plt.rc('font', **font)
 
-maina = open("result_a/main_a_softer.txt", "r")
+maina = open("LimogesBenedictins/CPU_Program/main_a_softer.txt", "r")
 ya = maina.read().split("\n")
 ya.remove('')
 sumlinesa = ya[1000]
@@ -16,7 +16,7 @@ ya = np.array(ya)
 ya = ya.astype(np.float)
 x = range(0, len(ya))
 
-mainb = open("result_b/main_b_softer.txt", "r")
+mainb = open("LimogesBenedictins/GPU_NonSharedMem/main_b_softer.txt", "r")
 yb = mainb.read().split("\n")
 yb.remove('')
 sumlinesb = yb[1000]
@@ -24,7 +24,7 @@ yb.remove(sumlinesb)
 yb = np.array(yb)
 yb = yb.astype(np.float)
 
-mainc = open("result_c/main_c_softer.txt", "r")
+mainc = open("LimogesBenedictins/GPU_SharedMem/main_c_softer.txt", "r")
 yc = mainc.read().split("\n")
 yc.remove('')
 sumlinesc = yc[1000]
@@ -43,14 +43,14 @@ fig, axs = plt.subplots(3, 2, tight_layout=True)
 #axs.legend(loc='best')
 
 #########################################################
-mainb = open("result_b/main_b_soften.txt", "r")
+mainb = open("LimogesBenedictins/GPU_NonSharedMem/main_b_soften.txt", "r")
 yb = mainb.read().split("\n")
 yb.remove('')
 sumlinesb = yb[1000]
 yb.remove(sumlinesb)
 yb = np.array(yb)
 yb = yb.astype(np.float)
-mainc = open("result_c/main_c_soften.txt", "r")
+mainc = open("LimogesBenedictins/GPU_SharedMem/main_c_soften.txt", "r")
 yc = mainc.read().split("\n")
 yc.remove('')
 sumlinesc = yc[1000]
@@ -69,14 +69,14 @@ mintemp = min(np.concatenate((yb,yc)))
 axs[0][0].set_ylim(mintemp - 0.01,0.15)
 
 #########################################################
-mainb = open("result_b/main_b_sharpen.txt", "r")
+mainb = open("LimogesBenedictins/GPU_NonSharedMem/main_b_sharpen.txt", "r")
 yb = mainb.read().split("\n")
 yb.remove('')
 sumlinesb = yb[1000]
 yb.remove(sumlinesb)
 yb = np.array(yb)
 yb = yb.astype(np.float)
-mainc = open("result_c/main_c_sharpen.txt", "r")
+mainc = open("LimogesBenedictins/GPU_SharedMem/main_c_sharpen.txt", "r")
 yc = mainc.read().split("\n")
 yc.remove('')
 sumlinesc = yc[1000]
@@ -93,14 +93,14 @@ axs[0][1].set_ylabel('Execution Time (ms)')
 axs[0][1].legend(loc='best')
 
 #########################################################
-mainb = open("result_b/main_b_shatter.txt", "r")
+mainb = open("LimogesBenedictins/GPU_NonSharedMem/main_b_shatter.txt", "r")
 yb = mainb.read().split("\n")
 yb.remove('')
 sumlinesb = yb[1000]
 yb.remove(sumlinesb)
 yb = np.array(yb)
 yb = yb.astype(np.float)
-mainc = open("result_c/main_c_shatter.txt", "r")
+mainc = open("LimogesBenedictins/GPU_SharedMem/main_c_shatter.txt", "r")
 yc = mainc.read().split("\n")
 yc.remove('')
 sumlinesc = yc[1000]
@@ -119,14 +119,14 @@ mintemp = min(np.concatenate((yb,yc)))
 axs[1][0].set_ylim(mintemp - 0.01,0.15)
 
 #########################################################
-mainb = open("result_b/main_b_blur.txt", "r")
+mainb = open("LimogesBenedictins/GPU_NonSharedMem/main_b_blur.txt", "r")
 yb = mainb.read().split("\n")
 yb.remove('')
 sumlinesb = yb[1000]
 yb.remove(sumlinesb)
 yb = np.array(yb)
 yb = yb.astype(np.float)
-mainc = open("result_c/main_c_blur.txt", "r")
+mainc = open("LimogesBenedictins/GPU_SharedMem/main_c_blur.txt", "r")
 yc = mainc.read().split("\n")
 yc.remove('')
 sumlinesc = yc[1000]
@@ -143,14 +143,14 @@ axs[1][1].set_ylabel('Execution Time (ms)')
 axs[1][1].legend(loc='best')
 
 #########################################################
-mainb = open("result_b/main_b_horisobel.txt", "r")
+mainb = open("LimogesBenedictins/GPU_NonSharedMem/main_b_horisobel.txt", "r")
 yb = mainb.read().split("\n")
 yb.remove('')
 sumlinesb = yb[1000]
 yb.remove(sumlinesb)
 yb = np.array(yb)
 yb = yb.astype(np.float)
-mainc = open("result_c/main_c_horisobel.txt", "r")
+mainc = open("LimogesBenedictins/GPU_SharedMem/main_c_horisobel.txt", "r")
 yc = mainc.read().split("\n")
 yc.remove('')
 sumlinesc = yc[1000]
@@ -169,14 +169,14 @@ mintemp = min(np.concatenate((yb,yc)))
 axs[2][0].set_ylim(mintemp - 0.01,0.15)
 
 #########################################################
-mainb = open("result_b/main_b_versobel.txt", "r")
+mainb = open("LimogesBenedictins/GPU_NonSharedMem/main_b_versobel.txt", "r")
 yb = mainb.read().split("\n")
 yb.remove('')
 sumlinesb = yb[1000]
 yb.remove(sumlinesb)
 yb = np.array(yb)
 yb = yb.astype(np.float)
-mainc = open("result_c/main_c_versobel.txt", "r")
+mainc = open("LimogesBenedictins/GPU_SharedMem/main_c_versobel.txt", "r")
 yc = mainc.read().split("\n")
 yc.remove('')
 sumlinesc = yc[1000]
