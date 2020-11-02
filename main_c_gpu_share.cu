@@ -38,17 +38,6 @@ int filterVerSobel[FILTER_SIZE] = {-1, -4, -6, -4, -1, -2, -8, -12, -8,
                                    -2, 0,  0,  0,  0,  0,  2,  8,   12,
                                    8,  2,  1,  4,  6,  4,  1};
 
-void changeColorPPM(PPMImage *img) {
-  int i;
-  if (img) {
-    for (i = 0; i < img->x * img->y; i++) {
-      img->data[i].red = RGB_COMPONENT_COLOR - img->data[i].red;
-      img->data[i].green = RGB_COMPONENT_COLOR - img->data[i].green;
-      img->data[i].blue = RGB_COMPONENT_COLOR - img->data[i].blue;
-    }
-  }
-}
-
 int calculDivisionFactor(int *filter, int sizeFilter) {
   int sum = 0;
   for (int i = 0; i < sizeFilter; i++) {
